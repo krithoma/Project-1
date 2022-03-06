@@ -17,4 +17,5 @@ public interface AlbumRepository extends JpaRepository<Album, Integer> {
 
     Album save(Album waxalbum);
 
+    int deleteByName(String name);
 }

@@ -12,12 +12,11 @@ import java.util.List;
 @Transactional
 public interface PeopleRepository extends JpaRepository<WaxPeople, Integer> {
 
-    //Listener queries
     List<WaxPeople> findAll();
 
     WaxPeople findByName(String name);
 
     WaxPeople save(WaxPeople waxperson);
 
-    //Track queries
+    int deleteByName(String name);
 }

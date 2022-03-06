@@ -15,11 +15,13 @@ import javax.persistence.*;
 public class Track {
     //Album tracks go here.
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int trackID;
+
     @Column
     private int trackNum;
     @Column
-    private String trackname;
+    private String name;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name="albumID")
