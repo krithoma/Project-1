@@ -16,14 +16,10 @@ public class WaxService {
     }
 
     //Listener services
-    public List<WaxPeople> findAllPeople() {return peopleRepository.findAllPeople();}
+    public List<WaxPeople> findAllPeople() {return peopleRepository.findAll();}
 
-    public WaxPeople findPersonByName(String name){
-        return peopleRepository.findPersonByName(name);
-    }
+    public WaxPeople findPeopleByName(String name){return peopleRepository.findByName(name);}
 
-    public WaxPeople savePeople(WaxPeople person){
-        return peopleRepository.savePeople(person);
-    }
+    public WaxPeople savePeople(WaxPeople waxperson){return peopleRepository.save(waxperson);}
 
 }

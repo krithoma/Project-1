@@ -11,11 +11,12 @@ import java.util.List;
 @Transactional
 public interface PeopleRepository extends JpaRepository<WaxPeople, Integer> {
 
-    @Query("from People")
-    List<WaxPeople> findAllPeople();
+    //@Query("from People")
+    List<WaxPeople> findAll();
 
-    @Query("from People")
-    WaxPeople findPersonByName(String name);
-    @Query("from People")
-    WaxPeople savePeople(WaxPeople person);
+    //@Query("from People")
+    WaxPeople findByName(String name);
+
+    //@Query("from People")
+    WaxPeople save(WaxPeople waxperson);
 }

@@ -1,7 +1,6 @@
 package project1.model;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,10 +14,10 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Album {
+public class Album<WaxListener> {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int albumID;
 
     @Column(unique = true)
@@ -32,8 +31,8 @@ public class Album {
     @Column
     private String format;
 
-    //@ManyToOne(fetch = FetchType.LAZY, optional = false)
-    //@JoinColumn(name="listenerID")
-    //public WaxListener waxlistener;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name="personID")
+    public WaxPeople waxperson;
 
 }

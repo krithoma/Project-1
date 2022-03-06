@@ -23,15 +23,11 @@ public class WaxController {
 
     //Listener mappings
     @GetMapping()
-    public List<WaxPeople> findAllPeople(){return waxService.findAllPeople();}
+    public List<WaxPeople> getAllPeople(){return waxService.findAllPeople();}
 
-    @GetMapping({"pname/{name}"})
-    public WaxPeople findPersonByName(@PathVariable String name){
-        return waxService.findPersonByName(name);
-    }
+    @GetMapping({"name/{name}"})
+    public WaxPeople getByName(@PathVariable String name){return waxService.findPeopleByName(name);}
 
     @PostMapping()
-    public WaxPeople postPeople(@RequestBody WaxPeople person){
-        return waxService.savePeople(person);
-    }
+    public WaxPeople postPeople(@RequestBody WaxPeople waxperson){return waxService.savePeople(waxperson);}
 }
