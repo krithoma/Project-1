@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "Album")
@@ -14,7 +15,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Album<WaxListener> {
+public class Album {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -35,4 +36,6 @@ public class Album<WaxListener> {
     @JoinColumn(name="personID")
     public WaxPeople waxperson;
 
+    @OneToMany(mappedBy = "waxalbum", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    public List<Track> tracks;
 }
