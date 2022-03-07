@@ -10,4 +10,7 @@ public class Application {
         SpringApplication.run(Application.class);
     }
 
+
+    //Next up, get logging working and make sure you meet all basic goals.
+    //Then Servlets.
 }
