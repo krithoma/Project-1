@@ -30,6 +30,7 @@ public class WaxService {
     public WaxPeople savePeople(WaxPeople waxperson){return peopleRepository.save(waxperson);}
 
     public int removePeople(String name){return peopleRepository.deleteByName(name);}
+    public int removePeopleById(int id){return peopleRepository.deleteById(id);}
 
     public WaxPeople updatePeople(WaxPeople waxperson){return peopleRepository.save(waxperson);}
 
@@ -37,10 +38,12 @@ public class WaxService {
     public List<Album> findAllAlbums(){return albumRepository.findAll();}
 
     public Album findAlbumsByName(String name){return albumRepository.findByName(name);}
+    public Album findAlbumsById(int id){return albumRepository.findById(id);}
 
     public Album saveAlbum(Album waxalbum){return albumRepository.save(waxalbum);}
 
     public int removeAlbum(String name){return albumRepository.deleteByName(name);}
+    public int removeAlbumById(int id){return albumRepository.deleteById(id);}
 
     public Album updateAlbum(Album waxalbum){return albumRepository.save(waxalbum);}
 
@@ -48,10 +51,12 @@ public class WaxService {
     public List<Track> findAllTracks(){return trackRepository.findAll();}
 
     public Track findTracksByName(String name){return trackRepository.findByName(name);}
+    public Track findTracksById(int id){return trackRepository.findById(id);}
 
     public Track saveTrack(Track waxtrack){return trackRepository.save(waxtrack);}
 
     public int removeTrack(String name){return trackRepository.deleteByName(name);}
+    public int removeTrackById(int id){return trackRepository.deleteById(id);}
 
     public Track updateTrack(Track waxtrack){return trackRepository.save(waxtrack);}
 }

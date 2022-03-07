@@ -13,8 +13,10 @@ public interface TrackRepository extends JpaRepository<Track, Integer> {
     List<Track> findAll();
 
     Track findByName(String trackname);
+    Track findById(int id);
 
     Track save(Track songtracks);
 
     int deleteByName(String name);
+    int deleteById(int id);
 }

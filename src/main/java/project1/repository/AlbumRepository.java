@@ -14,8 +14,10 @@ public interface AlbumRepository extends JpaRepository<Album, Integer> {
     List<Album> findAll();
 
     Album findByName(String name);
+    Album findById(int id);
 
     Album save(Album waxalbum);
 
     int deleteByName(String name);
+    int deleteById(int id);
 }

@@ -33,6 +33,8 @@ public class WaxController {
 
     @GetMapping({"id/{id}"})
     public WaxPeople getById(@PathVariable int id){return waxService.findPeopleById(id);}
+    public Album getAlbumById(@PathVariable int id){return waxService.findAlbumsById(id);}
+    public Track getTrackById(@PathVariable int id){return waxService.findTracksById(id);}
 
     @PostMapping()
     public WaxPeople postPeople(@RequestBody WaxPeople waxperson){return waxService.savePeople(waxperson);}
@@ -43,6 +45,11 @@ public class WaxController {
     public int deletePeople(@PathVariable String name){return waxService.removePeople(name);}
     public int deleteAlbum(@PathVariable String name){return waxService.removeAlbum(name);}
     public int deleteTrack(@PathVariable String name){return waxService.removeTrack(name);}
+
+    @DeleteMapping({"id/{id}"})
+    public int deletePeopleById(@PathVariable int id){return waxService.removePeopleById(id);}
+    public int deleteAlbumById(@PathVariable int id){return waxService.removeAlbumById(id);}
+    public int deleteTrackById(@PathVariable int id){return waxService.removeTrackById(id);}
 
     @PatchMapping()
     public WaxPeople patchPeople(@RequestBody WaxPeople waxperson){return waxService.updatePeople(waxperson);}

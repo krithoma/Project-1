@@ -20,6 +20,6 @@ public interface PeopleRepository extends JpaRepository<WaxPeople, Integer> {
     WaxPeople save(WaxPeople waxperson);
 
     int deleteByName(String name);
-    //delete by id
+    int deleteById(int id);
 
 }
