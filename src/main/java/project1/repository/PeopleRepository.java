@@ -15,7 +15,7 @@ public interface PeopleRepository extends JpaRepository<WaxPeople, Integer> {
     List<WaxPeople> findAll();
 
     WaxPeople findByName(String name);
-    //find by id.
+    WaxPeople findById(int id);
 
     WaxPeople save(WaxPeople waxperson);
 

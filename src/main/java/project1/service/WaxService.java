@@ -25,6 +25,7 @@ public class WaxService {
     public List<WaxPeople> findAllPeople() {return peopleRepository.findAll();}
 
     public WaxPeople findPeopleByName(String name){return peopleRepository.findByName(name);}
+    public WaxPeople findPeopleById(int id){return peopleRepository.findById(id);}
 
     public WaxPeople savePeople(WaxPeople waxperson){return peopleRepository.save(waxperson);}
 

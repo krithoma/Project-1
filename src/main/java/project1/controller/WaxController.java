@@ -31,6 +31,9 @@ public class WaxController {
     public Album getAlbumByName(@PathVariable String name){return waxService.findAlbumsByName(name);}
     public Track getTrackByName(@PathVariable String name){return waxService.findTracksByName(name);}
 
+    @GetMapping({"id/{id}"})
+    public WaxPeople getById(@PathVariable int id){return waxService.findPeopleById(id);}
+
     @PostMapping()
     public WaxPeople postPeople(@RequestBody WaxPeople waxperson){return waxService.savePeople(waxperson);}
     public Album postAlbum(@RequestBody Album waxalbum){return waxService.saveAlbum(waxalbum);}
