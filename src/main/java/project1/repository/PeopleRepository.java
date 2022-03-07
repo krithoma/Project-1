@@ -15,8 +15,11 @@ public interface PeopleRepository extends JpaRepository<WaxPeople, Integer> {
     List<WaxPeople> findAll();
 
     WaxPeople findByName(String name);
+    //find by id.
 
     WaxPeople save(WaxPeople waxperson);
 
     int deleteByName(String name);
+    //delete by id
+
 }

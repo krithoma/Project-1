@@ -41,7 +41,9 @@ public class WaxController {
     public int deleteAlbum(@PathVariable String name){return waxService.removeAlbum(name);}
     public int deleteTrack(@PathVariable String name){return waxService.removeTrack(name);}
 
-    //@PatchMapping()
-
+    @PatchMapping()
+    public WaxPeople patchPeople(@RequestBody WaxPeople waxperson){return waxService.updatePeople(waxperson);}
+    public Album patchAlbum(@RequestBody Album waxalbum){return waxService.updateAlbum(waxalbum);}
+    public Track patchTrack(@RequestBody Track waxtrack){return waxService.updateTrack(waxtrack);}
 
 }

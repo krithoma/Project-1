@@ -30,6 +30,8 @@ public class WaxService {
 
     public int removePeople(String name){return peopleRepository.deleteByName(name);}
 
+    public WaxPeople updatePeople(WaxPeople waxperson){return peopleRepository.save(waxperson);}
+
     //Album services
     public List<Album> findAllAlbums(){return albumRepository.findAll();}
 
@@ -38,6 +40,8 @@ public class WaxService {
     public Album saveAlbum(Album waxalbum){return albumRepository.save(waxalbum);}
 
     public int removeAlbum(String name){return albumRepository.deleteByName(name);}
+
+    public Album updateAlbum(Album waxalbum){return albumRepository.save(waxalbum);}
 
     //Track services
     public List<Track> findAllTracks(){return trackRepository.findAll();}
@@ -48,4 +52,5 @@ public class WaxService {
 
     public int removeTrack(String name){return trackRepository.deleteByName(name);}
 
+    public Track updateTrack(Track waxtrack){return trackRepository.save(waxtrack);}
 }
